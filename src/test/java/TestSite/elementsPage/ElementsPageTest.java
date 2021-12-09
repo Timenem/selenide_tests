@@ -1,10 +1,9 @@
 package TestSite.elementsPage;
 
 import TestSite.BaseTest;
-import TestSite.ElementsPage;
 import org.junit.jupiter.api.Test;
 
-import static TestSite.ElementsPage.*;
+import static TestSite.elementsPage.ElementsPage.*;
 
 public class ElementsPageTest extends BaseTest {
     private final String URL = "https://demoqa.com/elements";

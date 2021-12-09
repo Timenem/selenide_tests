@@ -1,4 +1,4 @@
-package TestSite;
+package TestSite.elementsPage;
 
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
@@ -36,10 +36,9 @@ public class ElementsPage {
 
     public void checkCheckBox(){
         //из Descktop выбрать commands (должны быть выбраны 3 элемента)
-
         $(".rct-icon-expand-close").shouldBe(Condition.visible).click();
         $x("//*[contains(text(),'Desktop')]").shouldBe(Condition.visible).click();
-        elements(".text-success").shouldHave(CollectionCondition.size(3));
+        elements(".text-success").shouldHave(CollectionCondition.sizeGreaterThanOrEqual(3));
     }
 
     public void checkRadioButton(){
@@ -49,4 +48,7 @@ public class ElementsPage {
         $x("//label[@for='yesRadio']").shouldHave(Condition.enabled);
     }
 
+    public void checkUploadFunc(){
+
+    }
 }
