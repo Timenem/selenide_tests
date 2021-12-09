@@ -1,7 +1,6 @@
 package TestSite;
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Screenshots;
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -19,8 +18,6 @@ public class BaseTest {
         Configuration.timeout = Duration.of(2, ChronoUnit.SECONDS).toMillis();
         Configuration.screenshots = false;
     }
-
-
 
     @BeforeAll
     public static void init(){

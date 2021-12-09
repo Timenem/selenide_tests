@@ -20,14 +20,10 @@ public class ElementsPage {
     public static SelenideElement TEXT_BOX  = $x("//span[text()='Text Box']");
     public static SelenideElement CHECK_BOX  = $x("//span[text()='Check Box']");
     public static SelenideElement RADIO_BUTTON = $x("//span[text()='Radio Button']");
-    public static SelenideElement WEB_TABLES  = $x("//span[text()='Web Tables']");
-    public static SelenideElement UPLOAD_DOWNLOAD = $x("//span[text()='Upload and Download']");
 
     public void clickOnLeftElement(SelenideElement element){
         element.click();
     }
-
-    public static SelenideElement FULL_NAME = $("#userName");
 
     public void inputDataIntoForm() {
      $("#userName").setValue("TEST NAME");
@@ -46,5 +42,11 @@ public class ElementsPage {
         elements(".text-success").shouldHave(CollectionCondition.size(3));
     }
 
+    public void checkRadioButton(){
+        //проверка нажатия radiobutton
+        $x("//label[@for='yesRadio']").shouldNotBe(Condition.disabled);
+        $x("//label[@for='yesRadio']").click();
+        $x("//label[@for='yesRadio']").shouldHave(Condition.enabled);
+    }
 
 }
