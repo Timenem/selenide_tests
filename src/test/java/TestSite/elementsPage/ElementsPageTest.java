@@ -23,5 +23,9 @@ public class ElementsPageTest extends BaseTest {
 
 
 
-  
+    @Test
+    public void chekBoxes(){
+        elementPage.clickOnLeftElement(CHECK_BOX);
+        elementPage.checkCheckBox();
+    }
 }

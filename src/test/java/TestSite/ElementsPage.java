@@ -38,4 +38,13 @@ public class ElementsPage {
 
     }
 
+    public void checkCheckBox(){
+        //из Descktop выбрать commands (должны быть выбраны 3 элемента)
+
+        $(".rct-icon-expand-close").shouldBe(Condition.visible).click();
+        $x("//*[contains(text(),'Desktop')]").shouldBe(Condition.visible).click();
+        elements(".text-success").shouldHave(CollectionCondition.size(3));
+    }
+
+
 }
