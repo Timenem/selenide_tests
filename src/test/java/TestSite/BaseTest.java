@@ -8,7 +8,6 @@ import org.junit.jupiter.api.BeforeAll;
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
 
-import static com.codeborne.selenide.FileDownloadMode.PROXY;
 
 public class BaseTest {
 
@@ -18,8 +17,6 @@ public class BaseTest {
         Configuration.browser = "firefox";
         Configuration.driverManagerEnabled = true;
         Configuration.downloadsFolder = "build/downloads/imgs";
-        //Configuration.proxyEnabled =true;
-        //Configuration.fileDownload = PROXY;
         Configuration.timeout = Duration.of(2, ChronoUnit.SECONDS).toMillis();
         Configuration.screenshots = false;
     }
@@ -29,10 +26,13 @@ public class BaseTest {
         setConfig();
     }
 
+
     @AfterAll
-    public static void tearDown(){
+    public void tearDown(){
         Selenide.closeWebDriver();
     }
 
-
+    public void openLink(String text){
+        Selenide.open(text);
+    }
 }

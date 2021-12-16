@@ -4,10 +4,6 @@ import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchFrameException;
-
-import java.time.Duration;
 
 import static com.codeborne.selenide.Selenide.*;
 
@@ -48,7 +44,4 @@ public class ElementsPage {
         $x("//label[@for='yesRadio']").shouldHave(Condition.enabled);
     }
 
-    public void checkUploadFunc(){
-
-    }
 }

@@ -1,13 +1,10 @@
 package TestSite.practiceForm;
 
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.commands.UploadFile;
 
 import java.io.File;
 
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.$;
 
 public class FormPage {
 
@@ -36,8 +33,6 @@ public class FormPage {
         $("#currentAddress").setValue("baker street 221 b");
         //$("#state").find("Uttar Pradesh").click();
         //$("#city").find("Lucknow").click();
-
-
         actions().moveToElement($("#submit")).click();
     }
 }
