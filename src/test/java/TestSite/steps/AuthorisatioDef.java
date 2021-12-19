@@ -1,23 +1,21 @@
 package TestSite.steps;
 
 import TestSite.BaseTest;
-import com.codeborne.selenide.Selenide;
-import io.cucumber.java.After;
-import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
-import io.cucumber.java.BeforeAll;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
 import static com.codeborne.selenide.Selenide.$;
 
 public class AuthorisatioDef  extends BaseTest {
+
+
     @Before
     public void initConfig(){
         setConfig();
     }
 
-    @Given("Страница авторизации")
+    @Given("Страница авторизации ")
     public void openAuthPage() {
         openLink("https://demoqa.com/login");
     }
@@ -37,4 +35,6 @@ public class AuthorisatioDef  extends BaseTest {
     public void pressButton() {
         $("#login").click();
     }
+
+
 }
