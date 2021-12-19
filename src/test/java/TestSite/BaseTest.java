@@ -26,9 +26,8 @@ public class BaseTest {
         setConfig();
     }
 
-
     @AfterAll
-    public void tearDown(){
+    public static void tearDown(){
         Selenide.closeWebDriver();
     }
 

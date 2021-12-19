@@ -19,7 +19,7 @@ public class FormPage {
         $("#lastName").setValue("LastName");
         $("#userEmail").setValue("email@test.com");
         $x("//label[@for='gender-radio-1']").click();
-        $("#userNumber").setValue("123456789");
+        $("#userNumber").setValue("+7111-84-56-651");
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption(2);
         $(".react-datepicker__year-select").selectOption("1994");
